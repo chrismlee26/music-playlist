@@ -6,16 +6,16 @@ while True:
 
     # Prints welcome message and options menu
     print('''
-  Welcome to Playlist Maker 🎶  
-  =====================================
-  Options:
-  1: View playlist
-  2: To add a new song to playlist
-  3: To remove a song from playlist
-  4: To search for song in playlist
-  5: Return the length of the playlist
-  =====================================
-  ''')
+        Welcome to Playlist Maker 🎶  
+        =====================================
+        Options:
+        1: View playlist
+        2: To add a new song to playlist
+        3: To remove a song from playlist
+        4: To search for song in playlist
+        5: Return the length of the playlist
+        =====================================
+    ''')
 
     # Prints welcome message and options menu
     user_selection = int(input('Enter one of the 5 options:  '))
