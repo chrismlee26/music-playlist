@@ -4,7 +4,7 @@
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/chrismlee26/music-playlist)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/chrismlee26/music-playlist)
 
-- This project is Assignment #1 for CS1.2 (Data Structures) at Make School
+This project is Assignment #1 for CS1.2 (Data Structures) at Make School
 
 ## Welcome to my music playlist project 🎶
 
@@ -15,7 +15,7 @@
 
 1. main.py
 
-   - houses the code running the program and takes in user inputs.
+   - Houses the code running the program and takes in user inputs.
 
 2. Playlist.py
 
