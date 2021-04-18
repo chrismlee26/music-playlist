@@ -23,32 +23,33 @@ class Playlist:
         # While loop checking title & return index (or -1)
         i = 0
 
-        current = self.__first_song
-        while current != title:
-            if current.get_next_song() == None:
+        current_song = self.__first_song
+        while current_song != title:
+            if current_song.get_next_song() == None:
                 return -1
 
-            current = current.get_next_song()
+            current_song = current_song.get_next_song()
             i += 1
         return i
 
     # TODO: Create a method called remove_song that removes a song from the playlist. This method takes one parameter, title, which is the song that should be removed.
 
     def remove_song(self, title):
-        # Same as before. while loop & remove.
-        # dont explicitly delete. make address before point to next. (disconnect fr chain).
+        # Remove doesn't explicitly delete. Make address before point to next -- this disconnects from the chain.
 
         current_song = self.__first_song
 
-        if current_song.get_title() == str(title).title():
+        if current_song.get_title() == title:
             self.__first_song = current_song.get_next_song()
             return True
 
-        while current_song.get_next_song().get_title() != str(title).title():
+        while current_song.get_next_song().get_title() != title:
             if current_song.get_next_song() == None:
                 return False
 
         current_song = current_song.get_next_song()
+        remove_song = current_song.get_next_song()
+        print("Song removed")
 
     # TODO: Create a method called length, which returns the number of songs in the playlist.
 
@@ -58,19 +59,15 @@ class Playlist:
 
     # TODO: Create a method called print_songs that prints a numbered list of the songs in the playlist.
 
-    # Example:
-    # 1. Song Title 1
-    # 2. Song Title 2
-    # 3. Song Title 3
-
     def print_songs(self):
-        pass
-        # song_index = 0
-        # index position i
+        counter = 0
+        current_song = self.__first_song
 
-        # for loop over songs list
-        #    # if songs_list >= 1
-        #    # maybe count at song_index
-        #    # return index, and list :S
+        while current_song != None:
+            counter += 1
+            print(f"{counter}. {current_song.get_title()}")
+            current_song = current_song.get_next_song()
 
-        # Linked list?????
+        if counter == 0:
+            print("No Songs loaded!")
+            return False
