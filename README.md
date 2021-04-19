@@ -23,7 +23,7 @@ This project is Assignment #1 for CS1.2 (Data Structures) at Make School
 
 3. Song.py
 
-   - Song allows operations on individual songs.
+   - Song is the Node class (to create and operate on songs). This contains all the getters and setters.
 
 ## Operation
 
